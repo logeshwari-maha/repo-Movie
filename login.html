@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Movie Review</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background: url('pngtree-3d-rendered-movie-theatre-with-white-screen-image_3732826.jpg')
+no-repeat center center fixed;
+background-size: cover;
+height: 100vh;
+align-items: center;
+justify-content: center;
+}
+header {
+background-color: #35424a;
+color: #ffffff;
+padding: 10px 0;
+text-align: center;
+position: relative;
+}
+main {
+padding: 20px;
+}
+form {
+display: flex;
+flex-direction: column;
+max-width: 300px;
+margin: 0 auto;
+}
+
+label {
+margin: 5px 0;
+}
+input {
+padding: 10px;
+margin-bottom: 10px;
+}
+button {
+padding: 10px;
+background-color: #35424a;
+color: #ffffff;
+border: none;
+cursor: pointer;
+}
+.error-message {
+color: red;
+}
+</style>
+</head>
+<body>
+<header>
+<h1>Login</h1>
+</header>
+<main>
+<form id="loginForm">
+<label for="username">Username:</label>
+<input type="text" id="username" required>
+<label for="password">Password:</label>
+<input type="password" id="password" required>
+<button type="submit">Login</button>
+</form>
+<p id="error" class="error-message"></p>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
