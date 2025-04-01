@@ -6,10 +6,12 @@ const username = document.getElementById('username').value;
  const password = document.getElementById('password').value;
 
 if (username === "admin" && password === "password") { 
-    alert("Login successful! Redirecting to admin dashboard."); window.location.href = "admin.html";
+    alert("Login successful! Redirecting to admin dashboard.");
+     window.location.href = "admin.html";
 } 
 else if (username === "user" && password === "password") {
-     alert("Login successful! Redirecting to user dashboard."); window.location.href = "user.html";
+     alert("Login successful! Redirecting to user dashboard."); 
+     window.location.href = "user.html";
 } else {
 document.getElementById('error').innerText = "Invalid username or password.";
 }
