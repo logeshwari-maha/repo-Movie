@@ -11,11 +11,7 @@ function loadMovies() {
 }
 function displayMovies() {
 const movieList = document.getElementById('movieList');
- movieList.innerHTML = movies.map(movie => `
-<div class="movie-item">
-<strong>${movie.title}</strong>
-</div>
-`).join('');
+ movieList.innerHTML = movies.map(movie => `<div class="movie-item"><strong>${movie.title}</strong></div>`).join('');
 }
 document.getElementById('reviewForm')
 ?.addEventListener('submit', function(event) { 

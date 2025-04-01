@@ -28,13 +28,7 @@ displayMovies();
 });
 function displayMovies() {
 const movieList = document.getElementById('movieList');
- movieList.innerHTML = movies.map((movie, index) => `
-<div class="movie-item">
-<strong>${movie.title}</strong>
-<button onclick="editMovie(${index})">Edit</button>
-<button onclick="deleteMovie(${index})">Delete</button>
-</div>
-`).join('');
+ movieList.innerHTML = movies.map((movie, index) => `<div class="movie-item"><strong>${movie.title}</strong><button onclick="editMovie(${index})">Edit</button><button onclick="deleteMovie(${index})">Delete</button></div>`).join('');
 }
 function resetForm() { 
     document.getElementById('movieTitle').value = ''; 
