@@ -7,11 +7,11 @@ const username = document.getElementById('username').value;
 
 if (username === "admin" && password === "password") { 
     alert("Login successful! Redirecting to admin dashboard.");
-     window.location.href = "admin.html";
+     window.location.href = "Admin.html";
 } 
 else if (username === "user" && password === "password") {
      alert("Login successful! Redirecting to user dashboard."); 
-     window.location.href = "user.html";
+     window.location.href = "User.html";
 } else {
 document.getElementById('error').innerText = "Invalid username or password.";
 }

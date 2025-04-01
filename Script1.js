@@ -7,7 +7,7 @@ const password = document.getElementById('password').value;
 
 if (username === "admin" && password === "password") {
      alert("Login successful! Redirecting to admin dashboard.");
-      window.location.href = "admin.html";
+      window.location.href = "Admin.html";
 } 
 else {
 alert("Invalid username or password.");
