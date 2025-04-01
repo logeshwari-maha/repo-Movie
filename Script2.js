@@ -18,14 +18,19 @@ const movieList = document.getElementById('movieList');
 `).join('');
 }
 document.getElementById('reviewForm')
-?.addEventListener('submit', function(event) { event.preventDefault();
-const movieTitle = document.getElementById('reviewMovieTitle').value.trim(); const userReview = document.getElementById('userReview').value.trim(); const errorMessage = document.getElementById('errorMessage');
+?.addEventListener('submit', function(event) { 
+    event.preventDefault();
+const movieTitle = document.getElementById('reviewMovieTitle').value.trim();
+ const userReview = document.getElementById('userReview').value.trim(); const errorMessage = document.getElementById('errorMessage');
 errorMessage.innerText = ''; const movieExists = movies.some
-(movie => movie.title.toLowerCase() === movieTitle.toLowerCase()); if (!movieExists) {
-errorMessage.innerText =
-'Movie not found! Please enter a valid movie title.'; return;
+(movie => movie.title.toLowerCase() === movieTitle.toLowerCase()); 
+if (!movieExists) {
+errorMessage.innerText ='Movie not found! Please enter a valid movie title.'; 
+return;
 }
-const userReviews = document.getElementById('userReviews'); userReviews.innerHTML+=`<p><strong>${movieTitle}:</strong>${userReview}</p>`;
-document.getElementById('reviewMovieTitle').value = ''; document.getElementById('userReview').value = '';
+const userReviews = document.getElementById('userReviews');
+ userReviews.innerHTML+=`<p><strong>${movieTitle}:</strong>${userReview}</p>`;
+document.getElementById('reviewMovieTitle').value = ''; 
+document.getElementById('userReview').value = '';
 })
 window.onload = loadMovies;
